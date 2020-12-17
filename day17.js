@@ -82,11 +82,7 @@ fs.readFile('day17data.txt', 'utf8', (err,data) => {
     console.log("newgrid", i+1, newGrid, totalCount);
     cubes = newGrid;
   }
-
-
 })
-
-
 
 // if (xlb) {
 //   adj.push(cubes[z-1][y][x]);

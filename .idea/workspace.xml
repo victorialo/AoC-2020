@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61af8344-57b4-45b0-a3a5-50e652308b25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11.js" beforeDir="false" afterPath="$PROJECT_DIR$/day11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day12.js" beforeDir="false" afterPath="$PROJECT_DIR$/day12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day13.js" beforeDir="false" afterPath="$PROJECT_DIR$/day13.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day15.js" beforeDir="false" afterPath="$PROJECT_DIR$/day15.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day17.js" beforeDir="false" afterPath="$PROJECT_DIR$/day17.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2.js" beforeDir="false" afterPath="$PROJECT_DIR$/day2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day3.js" beforeDir="false" afterPath="$PROJECT_DIR$/day3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4.js" beforeDir="false" afterPath="$PROJECT_DIR$/day4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day5.js" beforeDir="false" afterPath="$PROJECT_DIR$/day5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day6.js" beforeDir="false" afterPath="$PROJECT_DIR$/day6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day7.js" beforeDir="false" afterPath="$PROJECT_DIR$/day7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day8.js" beforeDir="false" afterPath="$PROJECT_DIR$/day8.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +73,14 @@
       <workItem from="1608116050169" duration="1186000" />
       <workItem from="1608192730296" duration="11212000" />
     </task>
+    <task id="LOCAL-00001" summary="cleaned up code from past 17 days">
+      <created>1608209984395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608209984395</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cleaned up code from past 17 days" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code from past 17 days" />
   </component>
 </project>
