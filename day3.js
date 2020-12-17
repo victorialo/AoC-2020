@@ -56,7 +56,6 @@ for (let i = 0; i < rights.length; i ++ ) {
       currentRow += down;
     }
     console.log("treecount", treeCount);
-    // console.log()
     product *= treeCount;
     console.log(product);
   });

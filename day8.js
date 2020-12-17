@@ -50,7 +50,6 @@ fs.readFile('day8data.txt', (err, data) => {
     // console.log("running", currentLine);
     if (visitedLines.has(currentLine) || changedVisited.has(currentLine)) {
       // console.log("found infinite loop on line", currentLine, total);
-      // debugger;
       // stillRun = false;
       // reset to main check
       currentLine = changed;
@@ -70,7 +69,6 @@ fs.readFile('day8data.txt', (err, data) => {
       } else {
         changedVisited.add(currentLine);
       }
-      // debugger;
       // console.log(currentLine);
       const [op, num] = inst[currentLine].split(' ');
       // console.log("op", op, num);
@@ -85,7 +83,6 @@ fs.readFile('day8data.txt', (err, data) => {
           // console.log(currentLine, "going to", num)
           const goToLine = parseInt(num);
           if (changed === -1) { //&& goToLine < 0) {
-            // debugger;
             changed = currentLine;
             // console.log("changing line", currentLine);
             currentLine += 1;
@@ -106,10 +103,3 @@ fs.readFile('day8data.txt', (err, data) => {
   }
   console.log("found total", total);
 })
-
-// https://liveatverve.com/
-// 3 month free, 6 month free parking after tour, WSG: $100 at the place I just linked you. That was the offer I had but it might've changed.
-// https://www.equityapartments.com/seattle/belltown/moda-apartments#/ $941 for your friend. Studio
-// $941. Studio
-// do the view floorplan it actually looks nice
-// for the Moda Apartments

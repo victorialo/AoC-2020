@@ -45,7 +45,6 @@ fs.readFile('day5data.txt', (err, data) => {
 let seats = [];
 fs.readFile('day5data.txt', (err, data) => {
   const d = data.toString().split('\n');
-  // console.log(d);
 
   const binaryRange = (begin, end, letter) => {
     const mid = Math.floor((begin+end)/2);
@@ -62,8 +61,6 @@ fs.readFile('day5data.txt', (err, data) => {
     let endRow = 127;
     let beginCol = 0;
     let endCol = 7;
-    // let row = 0;
-    // let col = 0;
     p.split('').forEach((d) => {
       if (['F', 'B'].includes(d)) {
         let [newBeginRow, newEndRow] = binaryRange(beginRow, endRow, d);
@@ -93,12 +90,9 @@ fs.readFile('day5data.txt', (err, data) => {
   for (let i = 0; i < full.length; i ++) {
     if (seats[i] !== full[i]) {
       console.log(full[i], "is your seat");
-      // return;
       break;
     }
   }
-
-
 });
 
 
@@ -117,14 +111,11 @@ fs.readFile('day5data.txt', (err, data) => {
     }
   }
 
-  // let highest = 0;
   d.forEach((p) => {
     let beginRow = 0;
     let endRow = 127;
     let beginCol = 0;
     let endCol = 7;
-    // let row = 0;
-    // let col = 0;
     p.split('').forEach((d) => {
       if (['F', 'B'].includes(d)) {
         let [newBeginRow, newEndRow] = binaryRange(beginRow, endRow, d);
@@ -155,7 +146,4 @@ fs.readFile('day5data.txt', (err, data) => {
 
   // const full = Array.from(new Array(max-min), (x, i) => i + min);
   // console.log(full);
-
-
-
 });

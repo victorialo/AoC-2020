@@ -77,7 +77,4 @@ fs.readFile('day13data.txt', (err, data) => {
     matches.push(t);
     console.log("t", t);
   }
-
-
-
 });

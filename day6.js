@@ -28,9 +28,6 @@ fs.readFile('day6data.txt', (err, data) => {
   // console.log(groups);
   groups.forEach((g) => {
     // console.log(g, "combined", g.split('\r\n').join());
-    // const p = g.split('\r\n').join('').split('');
-    // const p = g.replace(/\r/, "");
-    // console.log(p);
     let questions = [];
     let sharedQ = [];
     g.split("\r\n").forEach((p, index) => {
@@ -41,18 +38,15 @@ fs.readFile('day6data.txt', (err, data) => {
       } else {
         p.split('').forEach((q) => {
           // console.log("checking", q, "against", questions);
-          // debugger;
           if (questions.includes(q)) {
             sharedQ.push(q);
           }
         });
         // console.log(sharedQ);
       }
-      // debugger;
       questions = sharedQ;
       sharedQ = [];
     });
-    // debugger;
     console.log(questions);
     sum += questions.length;
     console.log(sum);

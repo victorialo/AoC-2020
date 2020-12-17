@@ -132,7 +132,6 @@ console.log("==================================================== part 2");
 fs.readFile('day17data.txt', 'utf8', (err,data) => {
   let layer = data.split("\r\n").map(r => r.split(''));
   let quads = [[layer]];
-  // console.log(cubes)
   let dim = layer.length;
   let depth = 1;
   let depth2 = 1;
@@ -197,10 +196,8 @@ fs.readFile('day17data.txt', 'utf8', (err,data) => {
       s.forEach((l,z) => {
         l.forEach((r, y) => {
           r.forEach((c, x) => {
-            // let [xlb, xub, ylb, yub, zlb, zub] = checkValidDim(x,y,z,dim);
 
             const [adj, count] = checkAdjs(x,y,z,w,quads);
-            // if (i !== 0) console.log(adj, count, "at", z, y, x);
             const on = c === '#';
             if (on) {
               if ([2,3].includes(count)) {
@@ -224,48 +221,4 @@ fs.readFile('day17data.txt', 'utf8', (err,data) => {
     console.log("newgrid pt2", i+1, newGrid, totalCount);
     quads = newGrid;
   }
-
-
 })
-
-
-
-// if (xlb) {
-//   adj.push(cubes[z-1][y][x]);
-//   if (ylb) {
-//     adj.push(cubes[z-1][y-1][x]);
-//     if (zlb) {
-//       adj.push(cubes[z-1][y-1][z-1]);
-//     }
-//   }
-// }
-// if (xlb) {adj.push(cubes[z][y][x-1])}
-// if (ylb) {adj.push(cubes[z][y-1][x])}
-// if (zlb) {adj.push(cubes[z-1][y][x])}
-// if (xlb && ylb) {adj.push(cubes[z][y-1][x-1])}
-// if (zlb && ylb) {adj.push(cubes[z-1][y-1][x])}
-// if (xlb && zlb) {adj.push(cubes[z-1][y][x-1])}
-// if (xlb && ylb && zlb) {adj.push(cubes[z-1][y-1][x-1])}
-// if (xub) {adj.push(cubes[z][y][x+1])}
-// if (yub) {adj.push(cubes[z][y+1][x])}
-// if (zub) {adj.push(cubes[z+1][y][x])}
-// if (xub && yub) {adj.push(cubes[z][y+1][x+1])}
-// if (xub && zub) {adj.push(cubes[z+1][y][x+1])}
-// if (zub && yub) {adj.push(cubes[z+1][y+1][x])}
-// if (xub && yub && zub) {adj.push(cubes[z-1][y-1][x-1])}
-// if (xlb && zub) {adj.push(cubes[z+1][y][x])}
-// if (xlb) {
-//   adj.push(cubes[z][y][x-1]);
-//   if (ylb) {
-//     adj.push(cubes[z][y-1][x-1]);
-//     if (zlb) {
-//       adj.push(cubes[z-1][y-1][x-1]);
-//     }
-//     if (yub) {
-//       adj.push(cubes[z][y-1][x-1]);
-//     }
-//     if (zub) {
-//       adj.push(cubes[z+1][y][x-1]);
-//     }
-//   }
-// }

@@ -65,8 +65,6 @@ fs.readFile('day11data.txt', (err, data) => {
     console.log(occupiedCount);
   }
 
-
-
   // oldBoard = newBoard;
   // [newBoard, occupiedCount] = fillBoard(oldBoard);
   // console.log("newboard 2", newBoard, occupiedCount);
@@ -88,15 +86,8 @@ fs.readFile('day11data.txt', (err, data) => {
   // oldBoard = newBoard;
   // [newBoard, occupiedCount] = fillBoard(oldBoard);
   // console.log("newboard 6", newBoard, occupiedCount, oldBoard === newBoard);
-
-
 })
-
-
 console.log("\n\n\n\n\n\n\n part 2")
-
-
-
 
 
 fs.readFile('day11data.txt', (err, data) => {
@@ -144,8 +135,6 @@ fs.readFile('day11data.txt', (err, data) => {
         adj.push(checkSeats(board, i, j, 1, 0));
         adj.push(checkSeats(board, i, j, 1, 1));
 
-
-
         // console.log(adj);
         // console.log("adj", adj, "for", i, j);
         // const adj = [
@@ -169,7 +158,6 @@ fs.readFile('day11data.txt', (err, data) => {
           return '#';
         } else if (adjCount >= 5) {
           // newBoard[i][j] = 'L';
-          // occupiedCount -= 1;
           return 'L';
         } else {
           if (c === '#') {occupiedCount += 1}
@@ -179,7 +167,6 @@ fs.readFile('day11data.txt', (err, data) => {
       })
     }), occupiedCount];
   }
-
   let [newBoard, occupiedCount] = fillBoard(board);
   let oldCount = 0;
   // console.log("first iter newboard", newBoard, occupiedCount, "\n\n\n\n", );
@@ -188,8 +175,6 @@ fs.readFile('day11data.txt', (err, data) => {
     [newBoard, occupiedCount] = fillBoard(newBoard);
     console.log("newboard", newBoard, occupiedCount);
   }
-  
-
 })
 
 

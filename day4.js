@@ -68,8 +68,6 @@ fs.readFile('day4data.txt', (err, data) => {
   // console.log("d1", d);
 
   passports = passports.map((da) => {
-    // console.log("passport", da, "trimmed", da.trim());
-    // return da.trim();
     return da.split(/[ \n]+/);
   });
   let valid = 0;

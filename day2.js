@@ -30,10 +30,6 @@ fs.readFile('day2data.txt', (err, data) => {
     positions = positions.split('-').map((n) => parseInt((n)));
     letter = letter.split(':')[0];
     // console.log(min, max, letter, pw);
-    // let count = 0;
-    // positions.forEach((j) => {
-    //   if (pw[j]
-    // })
     // console.log(letter, positions, pw);
     if ((pw[positions[0]-1] === letter && pw[positions[1]-1] !== letter) || (pw[positions[0]-1] !== letter && pw[positions[1]-1] === letter)) {
       // console.log(pw[positions[0]-1], pw[positions[1]-1], positions, letter);

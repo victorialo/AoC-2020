@@ -43,15 +43,10 @@ fs.readFile('day7data.txt', (err, data) => {
       bagSuperInners.push(...bagInners[b]);
       // console.log("superinners2 for", outer, bagSuperInners);
     }
-    // bagInners[inner].forEach((b) => {
-    //
-    // })
     // console.log("bagOuters", bagOuters);
     if (bagOuters['shiny gold']) {console.log(bagOuters['shiny gold'],  bagOuters['shiny gold'].length)};
   });
 });
-
-
 
 
 fs.readFile('day7data.txt', (err, data) => {
@@ -111,9 +106,6 @@ fs.readFile('day7data.txt', (err, data) => {
       bagSuperInners.push(...Array(iter).fill(bagInners[b[0]]).flat());
       console.log("superinners2 for", outer, bagSuperInners);
     }
-    // bagInners[inner].forEach((b) => {
-    //
-    // })
     // console.log("bagOuters", bagOuters);
     // if (bagOuters['shiny gold']) {console.log(bagOuters['shiny gold'],  bagOuters['shiny gold'].length)};
     if (counts['shiny gold']) {console.log("counts", counts['shiny gold'])};

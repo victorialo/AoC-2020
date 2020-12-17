@@ -1,67 +1,66 @@
 const fs = require('fs');
-// fs.readFile('day12data.txt', (err, data) => {
-//   const movements = data.toString().split("\r\n");
-//   // console.log(movements);
-//   let currentDir = 'E';
-//   let EW = 0;
-//   let NS = 0;
-//
-//   const move = (dir, num, NS, EW) => {
-//     let newNS = NS;
-//     let newEW = EW;
-//     switch (dir) {
-//       case 'N':
-//         newNS += num;
-//         break;
-//       case 'S':
-//         newNS -= num;
-//         break;
-//       case 'E':
-//         newEW -= num;
-//         break;
-//       case 'W':
-//         newEW += num;
-//         break;
-//     }
-//     // console.log(newNS, newEW);
-//     return [newNS, newEW];
-//   }
-//
-//   const rotate = (dir, num) => {
-//     const mappingDir = {'N': 0, 'E': 90, 'S': 180, 'W': 270};
-//     const mappingAngle = {0: 'N', 90: 'E', 180: 'S', 270: 'W', 360: 'N'};
-//     let currAngle = mappingDir[currentDir];
-//     if (dir === 'R') {
-//       currAngle = (currAngle + num) % 360;
-//     } else if (dir === 'L') {
-//       currAngle = (currAngle - num) % 360;
-//     }
-//     if (currAngle < 0) { currAngle += 360 }
-//     // console.log(currAngle);
-//     return mappingAngle[currAngle];
-//   }
-//   movements.forEach((m) => {
-//     let [dir, num] = m.split(/(\d+)/);
-//     num = parseInt(num);
-//     // console.log(dir, num);
-//     if (['N', 'S', 'E', 'W'].includes(dir)) {
-//       [NS, EW] = move(dir, num, NS, EW);
-//     } else if (dir === 'F') {
-//       [NS, EW] = move(currentDir, num, NS, EW);
-//     } else if (['L', 'R'].includes(dir)) {
-//       currentDir = rotate(dir, num);
-//     }
-//     // console.log("currentDir NS EW", currentDir, NS, EW);
-//   });
-//
-//   console.log(Math.abs(EW) + Math.abs(NS));
-//
-//
-// })
-
 fs.readFile('day12data.txt', (err, data) => {
   const movements = data.toString().split("\r\n");
   // console.log(movements);
+  let currentDir = 'E';
+  let EW = 0;
+  let NS = 0;
+
+  const move = (dir, num, NS, EW) => {
+    let newNS = NS;
+    let newEW = EW;
+    switch (dir) {
+      case 'N':
+        newNS += num;
+        break;
+      case 'S':
+        newNS -= num;
+        break;
+      case 'E':
+        newEW -= num;
+        break;
+      case 'W':
+        newEW += num;
+        break;
+    }
+    // console.log(newNS, newEW);
+    return [newNS, newEW];
+  }
+
+  const rotate = (dir, num) => {
+    const mappingDir = {'N': 0, 'E': 90, 'S': 180, 'W': 270};
+    const mappingAngle = {0: 'N', 90: 'E', 180: 'S', 270: 'W', 360: 'N'};
+    let currAngle = mappingDir[currentDir];
+    if (dir === 'R') {
+      currAngle = (currAngle + num) % 360;
+    } else if (dir === 'L') {
+      currAngle = (currAngle - num) % 360;
+    }
+    if (currAngle < 0) { currAngle += 360 }
+    // console.log(currAngle);
+    return mappingAngle[currAngle];
+  }
+  movements.forEach((m) => {
+    let [dir, num] = m.split(/(\d+)/);
+    num = parseInt(num);
+    // console.log(dir, num);
+    if (['N', 'S', 'E', 'W'].includes(dir)) {
+      [NS, EW] = move(dir, num, NS, EW);
+    } else if (dir === 'F') {
+      [NS, EW] = move(currentDir, num, NS, EW);
+    } else if (['L', 'R'].includes(dir)) {
+      currentDir = rotate(dir, num);
+    }
+    // console.log("currentDir NS EW", currentDir, NS, EW);
+  });
+
+  console.log(Math.abs(EW) + Math.abs(NS));
+
+
+})
+
+fs.readFile('day12data.txt', (err, data) => {
+  const movements = data.toString().split("\r\n");
   // let currentDir = 'E';
   let sEW = 0;
   let sNS = 0;
