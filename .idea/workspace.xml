@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61af8344-57b4-45b0-a3a5-50e652308b25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/day18.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day18data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day17.js" beforeDir="false" afterPath="$PROJECT_DIR$/day17.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +73,7 @@
       <workItem from="1608106129663" duration="9873000" />
       <workItem from="1608116050169" duration="1186000" />
       <workItem from="1608192730296" duration="11212000" />
+      <workItem from="1608276819613" duration="19622000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up code from past 17 days">
       <created>1608209984395</created>
@@ -96,6 +98,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cleaned up code from past 17 days" />
