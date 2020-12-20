@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61af8344-57b4-45b0-a3a5-50e652308b25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day18.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day18data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day19.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day19data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day20.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day20data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +76,8 @@
       <workItem from="1608116050169" duration="1186000" />
       <workItem from="1608192730296" duration="11212000" />
       <workItem from="1608276819613" duration="19622000" />
+      <workItem from="1608367385482" duration="12832000" />
+      <workItem from="1608460515757" duration="13055000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up code from past 17 days">
       <created>1608209984395</created>
