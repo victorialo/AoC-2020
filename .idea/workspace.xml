@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61af8344-57b4-45b0-a3a5-50e652308b25" name="Default Changelist" comment="days 21 and 22">
-      <change afterPath="$PROJECT_DIR$/day21.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day21data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day22.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day22data.txt" afterDir="false" />
+    <list default="true" id="61af8344-57b4-45b0-a3a5-50e652308b25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/day23.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day23data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +78,7 @@
       <workItem from="1608460515757" duration="13055000" />
       <workItem from="1608538836434" duration="12452000" />
       <workItem from="1608626401891" duration="16587000" />
-      <workItem from="1608718699061" duration="519000" />
+      <workItem from="1608718699061" duration="12210000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up code from past 17 days">
       <created>1608209984395</created>
@@ -89,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608209984395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="days 21 and 22">
+      <created>1608719258047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608719258047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
