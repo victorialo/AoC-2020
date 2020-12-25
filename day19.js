@@ -16,7 +16,6 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
         let subRule = [];
         r.forEach(r2 => {
           // console.log(r2, typeof r2);
-          // parseInt(r2)
           if (r2.includes('\"')) {
             // console.log("hello", r2);
             subRule.push(r2.replace(/['"]+/g, ''));
@@ -31,7 +30,6 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
 
       });
       // console.log(num, rules);
-      // if (num === 8) {do something}
       rulesMap[num] = rules;
     })
     return [rulesMap, inputs];
@@ -40,13 +38,21 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
   const [rulesMap, inputs] = parse(data);
   console.log(rulesMap);
 
-  let rule0 = rulesMap[0];
+  // let rule0 = rulesMap[0];
   // console.log(rule0);
 
-  const r42 = "(((b)((a)((b)(b)|(a)(b))|(b)(((a)|(b))((a)|(b))))|(a)((b)((b)(b))|(a)((b)(b)|(a)((a)|(b)))))(b)|((((a)(a)|(a)(b))(a)|((b)(b))(b))(b)|((((a)|(b))(a)|(b)(b))(a))(a))(a))"; //buildSubrules(rulesMap[42]);
-  const r31 = "((b)((b)((a)((b)(a))|(b)((a)(a)))|(a)((b)((a)(b)|((a)|(b))(a))|(a)((b)(a)|(a)(b))))|(a)((b)(((a)(b)|((a)|(b))(a))(b)|(((a)|(b))(a)|(b)(b))(a))|(a)(((b)(a))(b)|((b)(a)|(b)(b))(a))))";//buildSubrules(rulesMap[31]);
-  const r8 = `${r42}+`
-  const r11 = `(${r42}${r31}) | (${r42}${r42}${r31}${r31}) | (${r42}${r42}${r42}${r31}${r31}${r31}) | (${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}) | (${r42}${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}${r31}) | (${r42}${r42}${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}${r31}${r31})`;
+  //for example
+  // const r42-e = "(((b)((a)((b)(b)|(a)(b))|(b)(((a)|(b))((a)|(b))))|(a)((b)((b)(b))|(a)((b)(b)|(a)((a)|(b)))))(b)|((((a)(a)|(a)(b))(a)|((b)(b))(b))(b)|((((a)|(b))(a)|(b)(b))(a))(a))(a))"; //buildSubrules(rulesMap[42]);
+  // const r42-e2 = "((b(a(bb|ab)|b((a|b)(a|b)))|a(b(bb)|a(bb|a(a|b))))b|(((aa|ab)a|(bb)b)b|(((a|b)a|bb)a)a)a)"; //buildSubrules(rulesMap[42]);
+  //for real
+  const r42 = "((b((((b((b|a)(b|a))|a(ba|aa))b|(a((b|a)(b|a))|b(ba|ab))a)b|((b(ab|bb)|a(ba|ab))b|(a(ba|a(b|a))|b((b|a)(b|a)))a)a)a|(a(((ab|bb)b)a|((aa|bb)a)b)|b((b(ba|aa)|a(ba))a|((bb|ba)b|(ba|a(b|a))a)b))b)|a(b((b((bb|ba)b|(ba|aa)a)|a(a(aa|ab)))a|(b((bb|ba)b|(ba|ab)a)|a(b(bb|ba)|a(ba)))b)|a(a(a((ba|a(b|a))b|(b(b|a)|ab)a)|b(b(aa|ab)|a(aa|bb)))|b((a(b(b|a)|ab)|b(bb|ba))b|((aa|bb)b|(bb|ba)a)a))))a|((a(b(b(a((b|a)(b|a))|b(aa|bb))|a(b(bb|ba)|a(aa)))|a(a(((b|a)(b|a))b|(ba|ab)a)|b((aa|bb)a)))|b(b(a(a(ba))|b(b(b(b|a)|ab)|a(ba|a(b|a))))|a((b(aa)|a((b|a)(b|a)))b|((ba|aa)a|(b(b|a)|aa)b)a)))b|((b(a(a(aa)|b(ba|aa))|b(a(ab|bb)|b(ba)))|a(b((bb|ba)a)|a((bb|ba)b|(ba|aa)a)))b|(b((b(bb|ba))b|(a(bb|ba)|b(aa|bb))a)|a(((aa|bb)a|(aa|ab)b)a|((ab|bb)b|(ba|a(b|a))a)b))a)a)b)"; //buildSubrules(rulesMap[42]);
+  //for example
+  // const r31-e = "((b)((b)((a)((b)(a))|(b)((a)(a)))|(a)((b)((a)(b)|((a)|(b))(a))|(a)((b)(a)|(a)(b))))|(a)((b)(((a)(b)|((a)|(b))(a))(b)|(((a)|(b))(a)|(b)(b))(a))|(a)(((b)(a))(b)|((b)(a)|(b)(b))(a))))";//buildSubrules(rulesMap[31]);
+  // const r31-e2 = "(b(b(a(ba)|b(aa))|a(b(ab|(a|b)a)|a(ba|ab)))|a(b((ab|(a|b)a)b|((a|b)a|bb)a)|a((ba)b|(ba|bb)a)))";//buildSubrules(rulesMap[31]);
+  //for real
+  const r31 = "(a(b(b(b(((ba)b|(ba)a)a|((ba|ab)b|(aa|bb)a)b)|a(((bb|ba)a)b|(b(b(b|a)|aa)|a(b(b|a)|ab))a))|a(((b((b|a)(b|a))|a(bb|ba))a|((ba|a(b|a))b|(ba|aa)a)b)a|((((b|a)(b|a))b|(b(b|a)|aa)a)a|((ba|ab)a|(ba|a(b|a))b)b)b))|a(a(a(a((aa)a|(ab)b)|b(b(ba|ab)))|b(b(a(ab|bb)|b(ba|a(b|a)))|a(b(aa|ab)|a(ba))))|b((b((ab)a|(aa|ab)b)|a(b(ba|aa)|a(aa|ab)))a|((((b|a)(b|a))b|(ba|ab)a)b|((aa)a|(ba)b)a)b)))|b((((b((bb|ba)b|(ba|a(b|a))a)|a(b(ab|bb)|a(b(b|a)|ab)))b|(a(((b|a)(b|a))b|(aa|ab)a)|b(b(aa)|a(b(b|a)|ab)))a)a|((((b(b|a)|ab)a|(ba|ab)b)b|((ba)a|(ba|ab)b)a)b|(((ba)a|((b|a)(b|a))b)a|(a(ab)|b(ab))b)a)b)b|((b(((aa|bb)a)b|(a(ab)|b(ab))a)|a((b(bb|ba)|a(ab))a|((ab|bb)b)b))a|(a((((b|a)(b|a))a|(ba|aa)b)a|(((b|a)(b|a))b|(ba|ab)a)b)|b((((b|a)(b|a))b|(aa)a)a|(a(ab|bb)|b(ba))b))b)a))";
+  const r8 = `(${r42})+`;
+  const r11 = `(${r42}${r31}|${r42}${r42}${r31}${r31}|${r42}${r42}${r42}${r31}${r31}${r31}|${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}|${r42}${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}${r31}|${r42}${r42}${r42}${r42}${r42}${r42}${r31}${r31}${r31}${r31}${r31}${r31})`;
 
   // const buildSubrules-dead = rule => {
   //   let decomposed = [];
@@ -95,13 +101,10 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
         const subRule = r[ri];
 
         // part 2 begin
-        //continue this tomorrow
         if (subRule === 8) {
-          //  add some +
           decomSubrule += r8;
           continue;
         } else if (subRule === 11) {
-          //  add some other +
           decomSubrule += r11;
           continue;
         }
@@ -120,7 +123,13 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
       // decomSubrule += ')';
       decomposed += decomSubrule;
     }
-    return `(${decomposed})`;
+    // console.log(decomposed);
+    if (['a', 'b'].includes(decomposed)) {
+      return decomposed;
+    } else {
+      return `(${decomposed})`;
+    }
+
   }
 
   // console.log("rule4", buildSubrules(rulesMap[4]));
@@ -131,13 +140,10 @@ fs.readFile('day19data.txt', 'utf8', (err, data) => {
   // console.log("rule0", ...buildSubrules(rule0));
 //  a((aa|bb)(ab|ba)|(ab|ba)(aa|bb))b
 
-
-
   const regex = new RegExp("^" + buildSubrules(rulesMap[0]) + "$")
   // console.log(buildSubrules(rulesMap[0]));
   console.log("42", buildSubrules(rulesMap[42]));
   console.log("31", buildSubrules(rulesMap[31]));
-
 
   const checkString = str => {
     return regex.test(str);
