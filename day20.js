@@ -418,7 +418,7 @@ fs.readFile('day20data.txt', 'utf8', (err, data) => {
         flattened.push(...row);
         row.forEach( f => {
           let count = [...f].reduce((count, v) => (v === '#' ? count + 1 : count), 0);
-          console.log(count);
+          // console.log(count);
           hashCount += count;
         })
       }
@@ -476,7 +476,7 @@ fs.readFile('day20data.txt', 'utf8', (err, data) => {
           }
         }
       }
-      console.log(count);
+      // console.log(count);
       return count;
     }
 
